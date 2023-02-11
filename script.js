@@ -1,1 +1,6 @@
-//your JS code here. If required.
+function threeSum(arr, target) {
+// write your code here
+  
+}
+
+module.exports = threeSum;
