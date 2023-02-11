@@ -2,20 +2,23 @@
 // We will understand all of this later in the course.
 // DO NOT MODIFY THIS FILE
 
-const express = require('express');
-const path = require('path');
-
+const express = require("express");
+const path = require("path");
+const threeSum = require("./script");
 const app = express();
+// Parse JSON bodies (as sent by API clients)
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(__dirname));
 
-app.use(express.static(__dirname))
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname + "/main.html"));
+});
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/main.html'));
+app.post("/threesum", (req, res) => {
+  const { arr, target } = req.body;
+  const ans = threeSum(arr, target);
+  res.send({ message: ans });
 });
-//your code here
-app.post('/add', (req, res) => {
-  const {a,b} = req.body;
-  res.status(200).send(a+b);
-  // res.sendFile(path.join(__dirname + '/main.html'));
-});
+
 module.exports = app;
