@@ -1,10 +1,17 @@
-# Favorite Holiday 
+# 3 sum
 
 ### Create a webpage that describes your favorite holiday destination. The webpage should include the following elements:
+# Instructions 
 
-- A heading (h1) with the name of the holiday destination
-- A paragraph that provides a brief overview of the destination
-- A line break between the heading and the paragraph
-- An ordered list that lists the top 5 attractions in the destination
-- An unordered list that lists the must-try foods in the destination
-- Text within the ordered and unordered lists should be bold (strong or b) and/or italicized (em or i) to emphasize important information.
+Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target.
+Return the sum of the three integers.
+
+Assume that there will only be one solution.
+You only need to complete the `threeSum` function inside `script.js`
+
+Example:
+given array S = {-1 2 1 -4},
+
+and target = 1.
+
+The sum that is closest to the target is 2. (-1 + 2 + 1 = 2)
