@@ -1,6 +1,6 @@
 # 3 sum
 
-### Create a webpage that describes your favorite holiday destination. The webpage should include the following elements:
+
 # Instructions 
 
 Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target.
