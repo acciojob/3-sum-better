@@ -4,7 +4,7 @@
 
 const express = require("express");
 const path = require("path");
-const threesum = require("./script");
+const threeSum = require("./script");
 
 // Parse JSON bodies (as sent by API clients)
 const bodyParser = require("body-parser");
@@ -17,9 +17,9 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/main.html"));
 });
 
-app.post("/threesum", (req, res) => {
+app.post("/threeSum", (req, res) => {
   const { arr, target } = req.body;
-  const ans = threesum(arr, target);
+  const ans = threeSum(arr, target);
   res.send({ message: ans });
 });
 
